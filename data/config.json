@@ -1,0 +1,22 @@
+{
+  "shops": [
+    {
+      "id": "melt-tune",
+      "name": "メルトチューン",
+      "interval": 40,
+      "amount": 2200
+    },
+    {
+      "id": "afilia-magicalbox",
+      "name": "アフィリア・マジカルボックス（男性）",
+      "interval": 60,
+      "amount": 3000
+    },
+    {
+      "id": "afilia-magicalbox",
+      "name": "アフィリア・マジカルボックス（女性）",
+      "interval": 60,
+      "amount": 2500
+    }
+  ]
+}

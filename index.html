@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンカフェ チャージ更新タイミング可視化</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🕐 コンカフェ チャージ更新タイミング可視化</h1>
+            <p>入店時刻を入力してチャージ更新のタイミングを確認</p>
+        </div>
+
+        <div class="content">
+            <form id="chargeForm">
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="shopSelect">店舗選択 *</label>
+                        <select id="shopSelect" required>
+                            <option value="">-- 店舗を選択してください --</option>
+                        </select>
+                        <div class="info-text">店舗を選択するとチャージ更新間隔と料金が自動入力されます</div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="form-group">
+                            <label for="entryTime">入店時刻 *</label>
+                            <input 
+                                type="time" 
+                                id="entryTime" 
+                                placeholder="00:00"
+                                required
+                            >
+                            <div class="info-text">hh:mm形式で入力</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <button type="button" class="btn-now" id="nowBtn">現在時刻を入力</button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="form-group">
+                            <label for="chargeInterval">チャージ更新間隔（分） *</label>
+                            <input 
+                                type="number" 
+                                id="chargeInterval" 
+                                placeholder="30"
+                                min="1"
+                                max="1440"
+                                disabled
+                                required
+                            >
+                            <div class="info-text">1～1440分で入力</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chargeAmount">チャージ料金（円） *</label>
+                            <input 
+                                type="number" 
+                                id="chargeAmount" 
+                                placeholder="100"
+                                min="1"
+                                disabled
+                                required
+                            >
+                            <div class="info-text">チャージ更新時の料金</div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" class="btn-clear" id="clearBtn">リセット</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="table-section">
+                <h2>チャージ更新スケジュール</h2>
+                <div id="tableContainer" class="no-data">
+                    入店時刻、チャージ更新間隔、チャージ料金を入力してください
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/script_main.js"></script>
+</body>
+</html>
