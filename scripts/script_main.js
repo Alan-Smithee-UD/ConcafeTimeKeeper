@@ -104,9 +104,12 @@ function setupEventListeners() {
         tableContainer.innerHTML = '<div class="no-data">入店時刻、チャージ更新間隔、チャージ料金を入力してください</div>';
     });
 
-    // 入力欄のフォーカスアウト時にテーブル生成
+    // 入力欄の変更時にテーブル生成
+    entryTime.addEventListener('change', generateTable);
     entryTime.addEventListener('blur', generateTable);
+    chargeInterval.addEventListener('change', generateTable);
     chargeInterval.addEventListener('blur', generateTable);
+    chargeAmount.addEventListener('change', generateTable);
     chargeAmount.addEventListener('blur', generateTable);
 }
 
