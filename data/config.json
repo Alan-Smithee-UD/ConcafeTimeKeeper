@@ -18,5 +18,11 @@
       "interval": 60,
       "amount": 2500
     }
+    {
+        "id": "minepri"
+        "name": "みねっと、ぷりしーにゃ"
+        "interval": 40
+        "amount": 2200
+    }
   ]
 }
